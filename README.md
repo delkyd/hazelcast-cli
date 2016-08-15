@@ -1,10 +1,19 @@
-# What is hazelcast-cli?
+# Table of Contents
 
-hazelcast-cli is a Hazelcast management tool, a command line interface to install, configure, and upgrade Hazelcast on the local machine or cloud from any operating system.
+* [Hazelcast CLI](#hazelcast-cli)
+* [Installing Hazelcast CLI](#installing-hazelcast-cli)
+* [Requirements](#requirements)
+  * [hazelcast-cli.properties](#hazelcast-cli-properties)
+  * [SSH Configuration](#ssh-configuration)
+* [Operations](#operations)
 
-# Installation
+# Hazelcast CLI
 
-Run the following command to install hazelcast-cli: 
+Hazelcast CLI is a Hazelcast management tool, a command line interface to install, configure, and upgrade Hazelcast on the local machine or cloud on any operating system.
+
+# Installing Hazelcast CLI
+
+Run the following command to install Hazelcast CLI:
 
 ```brew install https://raw.githubusercontent.com/bilalyasar/homebrew/master/Library/Formula/hazelcast-cli.rb```
 
@@ -26,27 +35,27 @@ Your public key has to be configured on the target machine.
 
 # Operations
 
-## Install Hazelcast
+**Installing Hazelcast:**
 
 `hazelcast --install --hostname europe1 --version 3.4.1`
 
-## Start a Hazelcast Member
+**Starting a Hazelcast Member:**
 
 `hazelcast --start --hostname europe1 --clustername wildcats --nodename tiger`
 
-## Stop a Hazelcast Member
+**Stopping a Hazelcast Member:**
 
 `hazelcast --stop --hostname europe1 --clustername wildcats --nodename tiger`
 
-## Start Management Center
+**Starting Hazelcast Management Center:**
 
 `hazelcast --startMC --hostname europe1`
 
-## Rolling Upgrade Management Center
+**Rolling Upgrade Hazelcast Management Center:**
 
 `hazelcast --upgrade --clustername wildcats --version 3.4.2`
 
-# TODO
+# To Do
 
 * More operating system support: apt-get, exe, Android.
 * Starting Hazelcast bundled Tomcat.
